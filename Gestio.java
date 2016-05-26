@@ -30,12 +30,11 @@ public class Gestio
     String strChoice="";
     while(!strChoice.equals("q") && !strChoice.equals("Q") ){
       menu();
-      strChoice = userInput.next();
+      strChoice = userInput.nextLine();
       switch(strChoice){
         case "1":
-          System.out.println("Introduir codi client");
-          String strCodi=userInput.next();
-          int codi=Integer.parseInt(strCodi);
+          System.out.println("Introduir codi client ");
+          int codi=userInput.nextInt();
           visualitzaClient(codi);
           break;
         case "2":
@@ -112,15 +111,15 @@ public class Gestio
 
       Scanner userInput = new Scanner(System.in);
       System.out.println("Introduir nom del client");
-      String nom=userInput.next();
+      String nom=userInput.nextLine();
       System.out.println("Introduir llinatge1 del client");
-      String llinatge1=userInput.next();
+      String llinatge1=userInput.nextLine();
       System.out.println("Introduir llinatges2 del client");
-      String llinatge2=userInput.next();
+      String llinatge2=userInput.nextLine();
       System.out.println("Introduir nif del client");
-      String nif=userInput.next();
+      String nif=userInput.nextLine();
       System.out.println("Introduir telèfon del client");
-      String telefon=userInput.next();
+      String telefon=userInput.nextLine();
 
       sql="INSERT INTO PERSONA_CLI SET id_client=?, "+
       "nom=?,llinatge1=?,llinatge2=?,nif=?,telefon=?";
